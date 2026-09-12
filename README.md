@@ -13,7 +13,6 @@ The project contains 1,000 customer records.
 * Jupyter Notebook – to write and run the analysis
 
 #### Data Processing
-
 1. Reading the Dataset
 I started by reading the acw_user_data.csv file using csv.DictReader().
 Each customer record was stored as a dictionary inside a list. I also included exception handling so that errors such as a missing file can be reported. A total of 1,000 records were successfully loaded.
@@ -24,6 +23,7 @@ I created separate functions to organise the following information into nested d
 * Vehicle
 * Credit Card
 * Address
+
 I also created functions to convert values into the correct data types
 
 3. Checking the Dependants Column
@@ -51,7 +51,6 @@ Any credit card with a duration greater than 10 years was flagged.
 A total of 252 customer records were identified and saved into remove_ccard.json file
 
 7. Creating the Salary-Commute Attribute
-
 I created a new customer attribute called Salary-Commute
 This represents the customer's yearly salary in relation to the distance they commute to work.
 For customers travelling more than 1 km, the value was calculated as:
@@ -60,7 +59,6 @@ For customers travelling 1 km or less, their yearly salary was used as the Salar
 The updated customer records were then sorted in ascending order and saved into commute.json file
 
 #### Data Analysis and Visualisation
-
 After completing the data processing section, I used Pandas and Seaborn to carry out some basic analysis and visualisation using the original CSV file.
 
 1. Univariate Analysis
