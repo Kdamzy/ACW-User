@@ -1,12 +1,7 @@
 ### ACW User Data Processing and Visualisation
-
 #### Project Overview
 This project focuses on processing, cleaning, restructuring and visualising the ACW user dataset using Python.
-
 The original data was provided in CSV format and contains different information about customers such as their personal details, employment information, salary, pension, commuting distance, vehicle details, credit card information and address.
-
-The main aim of this project was to read the data, correct some data quality issues, convert the flat CSV structure into a more organised nested JSON structure and carry out some basic data analysis and visualisation.
-
 The project contains 1,000 customer records.
 
 #### Tools and Libraries Used
@@ -83,18 +78,17 @@ A count plot was created to show the distribution of the number of dependants.
 4. Age by Marital Status
 I created a stacked histogram to show the age distribution based on marital status.
 
-Multivariate Analysis
+5. Multivariate Analysis
 I also created scatter plots to examine the relationship between different customer attributes.
 
-Commute Distance Against Salary
+6. Commute Distance Against Salary
 This plot was used to examine the relationship between the distance travelled to work and yearly salary.
 
-Age Against Salary
+7. Age Against Salary
 This plot shows the relationship between customer age and yearly salary.
 
-Age Against Salary Conditioned by Dependants
+8. Age Against Salary Conditioned by Dependants
 I created another scatter plot to compare age and salary while using the number of dependants as an additional variable.
-
 
 
 #### How to Run the Project
