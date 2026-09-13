@@ -13,11 +13,11 @@ The project contains 1,000 customer records.
 * Jupyter Notebook – to write and run the analysis
 
 #### Data Processing
-1. Reading the Dataset
+1. Reading the Dataset: 
 I started by reading the acw_user_data.csv file using csv.DictReader().
 Each customer record was stored as a dictionary inside a list. I also included exception handling so that errors such as a missing file can be reported. A total of 1,000 records were successfully loaded.
 
-2. Converting the Flat Data into Nested Structures
+2. Converting the Flat Data into Nested Structures: 
 The original CSV file contains all customer information in a flat structure.
 I created separate functions to organise the following information into nested dictionaries:
 * Vehicle
@@ -26,17 +26,17 @@ I created separate functions to organise the following information into nested d
 
 I also created functions to convert values into the correct data types
 
-3. Checking the Dependants Column
+3. Checking the Dependants Column: 
 I checked the Dependants column for missing or empty values.
 A total of 19 records were found with missing dependant information.
 The affected row indexes were recorded so the problem could be identified before further analysis.
 
-4. Creating the Processed JSON File
+4. Creating the Processed JSON File: 
 After restructuring the data, I saved all processed customer records into processed.json file
 I then loaded the file back into Python and compared it with the original processed list to make sure that the data was saved correctly.
 The comparison returned True, confirming that the saved JSON data matched the processed records.
 
-5. Separating Retired and Employed Customers
+5. Separating Retired and Employed Customers: 
 I separated the customer records into two different groups.
 Customers with a Retired value of True were saved into retired.json file
 Customers who were not retired and had a valid employer name were saved into employed.json file
@@ -44,13 +44,13 @@ The result was:
 * Retired customers: 246
 * Employed customers: 754
 
-6. Checking Credit Card Duration
+6. Checking Credit Card Duration: 
 I created a function to calculate the duration between each customer's credit card start date and expiry date.
 The dates were converted into months so that the total duration could be calculated.
 Any credit card with a duration greater than 10 years was flagged.
 A total of 252 customer records were identified and saved into remove_ccard.json file
 
-7. Creating the Salary-Commute Attribute
+7. Creating the Salary-Commute Attribute: 
 I created a new customer attribute called Salary-Commute
 This represents the customer's yearly salary in relation to the distance they commute to work.
 For customers travelling more than 1 km, the value was calculated as:
@@ -90,8 +90,7 @@ I created another scatter plot to compare age and salary while using the number 
 
 
 #### How to Run the Project
-* Clone or download this repository.
-* Make sure acw_user_data.csv is in the same project folder as the notebook.
+* Clone this repository.
 * Install the required external libraries:
 * pip install pandas seaborn
 * Open the Jupyter Notebook.
